@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>Using JavaScript Image Map</title>
+
+      <script type = "text/javascript">
+         <!--
+            function showTutorial(name) {
+               document.myform.stage.value = name
+            }
+         //-->
+         function myFunction() {
+          location.replace("https://www.w3schools.com")
+         }
+      </script>
+   </head>
+
+   <body>
+
+      <img src = "usemap.gif" alt = "HTML Map" border = "0" usemap = "#tutorials"/>
+
+      <map name = "tutorials">
+
+         <area onclick="window.open('o.html');" shape = "rect"
+            coords = "0,0,153,130"
+            onMouseOver = "showTutorial('html')"
+            onMouseOut = "showTutorial('')" >
+
+         <area onclick="window.open('t.html');" shape = "circle"
+            coords = "1,133,151,227"
+            onMouseOver = "showTutorial('php')"
+            onMouseOut = "showTutorial('')" >
+      </map>
+   <form name = "myform">
+         <input type = "text" name = "stage" size = "20" />
+   </form>
+   </body>
+</html>
+
